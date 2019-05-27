@@ -21,7 +21,7 @@
     "@angular/platform-browser": "^7.2.15",
     "@angular/platform-browser-dynamic": "^7.2.15",
     "@angular/router": "^7.2.15",
-    "ngx-dropzone": "file:/dist/ngx-dropzone/",
+    "ngx-dropzone": "file:dist/ngx-dropzone/",
     "core-js": "^2.5.4",
     "rxjs": "^6.5.2",
     "tsickle": "^0.35.0",
