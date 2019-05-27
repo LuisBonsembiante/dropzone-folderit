@@ -1,22 +1,26 @@
-import { ElementRef, EventEmitter } from '@angular/core';
-import { NgxDropzoneService } from './ngx-dropzone.service';
-export declare class NgxDropzoneComponent {
-    private host;
+import { ElementRef, EventEmitter, TemplateRef, OnInit } from '@angular/core';
+import { NgxDropzoneService, ParsedFile, RejectedFile } from './ngx-dropzone.service';
+export declare class NgxDropzoneComponent implements OnInit {
     service: NgxDropzoneService;
-    constructor(host: ElementRef, service: NgxDropzoneService);
-    label: string;
+    constructor(service: NgxDropzoneService);
+    dropareaTemplate: TemplateRef<ElementRef>;
+    previewTemplate: TemplateRef<ElementRef>;
     multiple: boolean;
     accept: string;
     maxFileSize: number;
     showPreviews: boolean;
     preserveFiles: boolean;
+    files: ParsedFile[];
+    filesInput: File[];
     filesAdded: EventEmitter<File[]>;
-    filesRejected: EventEmitter<File[]>;
+    filesRemoved: EventEmitter<File[]>;
+    filesRejected: EventEmitter<RejectedFile[]>;
+    filesChanged: EventEmitter<File[]>;
     disabled: boolean;
-    hovered: boolean;
+    hovering: boolean;
     private fileInput;
     showFileSelector(): void;
-    reset(): void;
+    ngOnInit(): void;
     onFilesSelected(event: any): void;
     /**
      * UPDATE 10.03.2019:
@@ -26,6 +30,8 @@ export declare class NgxDropzoneComponent {
     onDragOver(event: any): void;
     onDragLeave(event: any): void;
     onDrop(event: any): void;
-    private handleFileDrop;
+    removeFile(file: ParsedFile): void;
+    private handleFilesSelection;
+    private handleFileListSelection;
     private preventDefault;
 }
