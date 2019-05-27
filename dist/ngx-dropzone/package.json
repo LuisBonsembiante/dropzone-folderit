@@ -1,8 +1,8 @@
 {
   "name": "ngx-dropzone",
   "description": "A highly configurable dropzone component for Angular.",
-  "version": "1.2.3",
-  "author": "Peter Freeman",
+  "version": "1.2.5",
+  "author": "Luis Bosnembiante",
   "keywords": [
     "angular",
     "angular 2",
@@ -23,5 +23,18 @@
   },
   "bugs": {
     "url": "https://github.com/peterfreeman/ngx-dropzone/issues"
+  },
+  "main": "bundles/ngx-dropzone.umd.js",
+  "module": "fesm5/ngx-dropzone.js",
+  "es2015": "fesm2015/ngx-dropzone.js",
+  "esm5": "esm5/ngx-dropzone.js",
+  "esm2015": "esm2015/ngx-dropzone.js",
+  "fesm5": "fesm5/ngx-dropzone.js",
+  "fesm2015": "fesm2015/ngx-dropzone.js",
+  "typings": "ngx-dropzone.d.ts",
+  "metadata": "ngx-dropzone.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
   }
 }
